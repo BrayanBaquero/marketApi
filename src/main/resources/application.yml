@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: dev
+
+server:
+  servelet:
+    context-path: /market/api
+
+---
+spring:
+  profiles: dev
+  datasource:
+ #   driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/market-place
+    username: admin
+    password: secret
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8082
+
+
+
+---
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:postgresql://localhost:5432/market-place
+    username: admin
+    password: secret
+
+server:
+  port: 8090
