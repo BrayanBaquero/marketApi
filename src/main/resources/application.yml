@@ -3,7 +3,7 @@ spring:
     active: dev
 
 server:
-  servelet:
+  servlet:
     context-path: /market/api
 
 ---
