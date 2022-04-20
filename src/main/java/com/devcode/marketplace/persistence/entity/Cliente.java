@@ -12,14 +12,14 @@ import java.util.List;
 @Setter
 public class Cliente {
     @Id
-    @Column(name = "id_cliente")
-    private Integer idCliente;
+    @Column(name = "id")
+    private String idCliente;
 
     private String nombre;
 
-    private String apellido;
+    private String apellidos;
 
-    private Integer celular;
+    private Long celular;
 
     private String direccion;
 
