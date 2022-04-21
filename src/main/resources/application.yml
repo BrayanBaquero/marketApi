@@ -27,9 +27,9 @@ server:
 spring:
   profiles: prod
   datasource:
-    url: jdbc:postgresql://localhost:5432/market-place
-    username: admin
-    password: secret
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
 
 server:
-  port: 8090
+  port: ${PORT}
